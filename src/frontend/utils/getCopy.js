@@ -35,7 +35,7 @@ export const copy = {
     [SPANISH]: 'Título',
   },
   'formLabels.subtitle': {
-    [ENGLISH]: 'Share why you\'re #StickingWithEd',
+    [ENGLISH]: 'Share why you\'re Voting Tedra',
     [SPANISH]: 'Comparte por qué estás #ConEd',
   },
   'formLabels.background': {

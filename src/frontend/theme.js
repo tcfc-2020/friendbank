@@ -4,10 +4,10 @@ const theme = {
     grey: '#c2c2c2',
     black: '#111111',
     white: '#FFFFFF',
-    blue: '#005196',
-    darkBlue: '#00284a',
+    blue: '#234763',
+    darkBlue: '#234763',
     green: '#009645',
-    red: '#FF3333',
+    red: '#234763',
   },
   fonts: {
     mainFamily: 'Museo Sans',

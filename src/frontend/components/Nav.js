@@ -199,7 +199,7 @@ export default function Nav(props) {
       </RedirectRow>
       <NavContainer>
         <Logo href={makeLocaleLink(HOMEPAGE_ROUTE)}>
-          <img src="https://ed-markey-supporter-photos.s3.amazonaws.com/logo.png" alt={getCopy('nav.logoAlt')} />
+          <img src="https://www.tedracobb.com/wp-content/themes/tedracampaign/assets/images/logo-badge.png" alt={getCopy('nav.logoAlt')} />
         </Logo>
         <NavItemsContainer>
           <LeftLink href={languageLink}>
