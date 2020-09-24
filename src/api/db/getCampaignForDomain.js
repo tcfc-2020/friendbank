@@ -8,6 +8,8 @@ module.exports = async function getCampaignForDomain(db, domain) {
     const campaign = await campaigns.findOne({ domains: domain });
     
     console.log('Found Campaign.');
+    console.log(campaign.toString());
+    console.log('End Campaign');
 
     return campaign;
   } catch (error) {
