@@ -1,10 +1,13 @@
 const createApiError = require('../utils/createApiError');
 
 module.exports = async function getCampaignForDomain(db, domain) {
+  console.log('Attempting to get campaigns');
   try {
     const campaigns = db.collection('campaigns');
 
     const campaign = await campaigns.findOne({ domains: domain });
+    
+    console.log('Found Campaign.');
 
     return campaign;
   } catch (error) {
