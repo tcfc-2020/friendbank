@@ -65,6 +65,8 @@ module.exports = ({ db }) => {
       await mediaCollection.insertOne(media);
 
       const s3 = new aws.S3();
+
+      console.log("Uploading to S3...");
       const s3Params = {
         Bucket: S3_BUCKET,
         Key: fileName,
@@ -75,11 +77,15 @@ module.exports = ({ db }) => {
 
       const signedUrl = await s3.getSignedUrl('putObject', s3Params);
 
+      console.log("Signed Url...");
+      console.log(signedUrl);
+
       res.json({
         media,
         signedUrl,
       });
     } catch (error) {
+      console.log("Error...");
       apiErrorHandler(res, error);
     }
   }
