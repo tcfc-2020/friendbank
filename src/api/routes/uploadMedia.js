@@ -80,8 +80,6 @@ module.exports = ({ db }) => {
       console.log("Signed Url...");
       console.log(signedUrl);
 
-      await request(url);
-
       res.json({
         media,
         signedUrl,

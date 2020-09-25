@@ -20,44 +20,8 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     {
       _id: 'default',
       type: 'image',
-      source: 'https://www.incimages.com/uploaded_files/image/1920x1080/Tedra-Cobb-3_371741.jpg',
-      alt: 'Tedra in a parade',
-    },
-    {
-      _id: 'default3',
-      type: 'image',
       source: 'https://www.tedracobb.com/wp-content/uploads/2018/09/tedra-cobb-cover-1.jpg',
       alt: 'Tedra at an event',
-    },
-    {
-      _id: 'default2',
-      type: 'image',
-      source: 'https://s.hdnux.com/photos/74/35/57/15850449/9/1200x0.jpg',
-      alt: 'Tedra in a meeting',
-    },
-    {
-      _id: 'default4',
-      type: 'image',
-      source: 'https://www.tedracobb.com/wp-content/uploads/2017/09/Senior-Center.jpg',
-      alt: 'Tedra at a community breakfast',
-    },
-    {
-      _id: 'default5',
-      type: 'image',
-      source: '  https://www.northcountrypublicradio.org/news/images/cobb1wins062718.jpg',
-      alt: 'Tedra celebrating',
-    },
-    {
-      _id: 'default6',
-      type: 'image',
-      source: '  https://bloximages.chicago2.vip.townnews.com/saratogian.com/content/tncms/assets/v3/editorial/c/93/c939dd50-e35a-56f8-b00c-f909e5dd39bd/5b9fc2a6e9683.image.jpg?crop=1763%2C992%2C0%2C91&resize=1763%2C992&order=crop%2Cresize',
-      alt: 'Tedra distributing literature',
-    },
-    {
-      _id: 'default7',
-      type: 'image',
-      source: 'https://www.localsyr.com/wp-content/uploads/sites/63/2019/04/TedraCobb_PotsdamTwnHall-1_1555434174645_82765276_ver1.0.jpg',
-      alt: 'Tedra at a town hall meeting',
     },
   ];
 
@@ -71,7 +35,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
     defaultMedia: {
       _id: 'tedra-event',
       type: 'image',
-      source: 'https://www.incimages.com/uploaded_files/image/1920x1080/Tedra-Cobb-3_371741.jpg',
+      source: 'https://www.tedracobb.com/wp-content/uploads/2018/09/tedra-cobb-cover-1.jpg',
       alt: 'Tedra at an event',
     },
   });
@@ -79,7 +43,7 @@ const { TRANSACTIONAL_EMAIL } = require('../../shared/emailFrequency');
   const copy = JSON.stringify({
     'idQuestions.support.label': {
       [ENGLISH]: 'Will you vote to elect Tedra Cobb to Congress on November 3rd?',
-      [SPANISH]: '¿Votará para reelegir a Tedra Tedra al Senado de los Estados Unidos el 1 de septiembre?',
+      [SPANISH]: '¿Votará para elegir a Tedra el 3 de noviembre?',
     },
     'idQuestions.support.options': {
       [ENGLISH]: [
