@@ -83,7 +83,7 @@ module.exports = ({ db }) => {
 
       // Email admins to notify of successful creation
       const mailResult = await sendMail(
-        process.env.MAIL_SIGNUP_ALERT_RECIPIENTS,
+        process.env.MAIL_SIGNUP_ALERT_RECIPIENTS.split(','),
         process.env.MAIL_SIGNUP_ALERT_ID,
         {
           first: token.user.firstName,
