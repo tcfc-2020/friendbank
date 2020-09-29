@@ -106,12 +106,6 @@ module.exports = ({ db }) => {
           const facebookLink = `https://www.facebook.com/sharer/sharer.php?u=${shareLink}&quote=${encodeURIComponent(pageMatch.title)}`;
           const twitterLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${pageMatch.title}\n${shareLink}`)}`;
 
-          console.log(pageAuthor.email)
-          console.log(pageAuthor.firstName)
-          console.log(signup.firstName)
-          console.log(signup.lastName)
-          console.log(process.env.MAIL_SIGNUP_ID)
-
           const mailResult = await sendMail(
             pageAuthor.email,
             process.env.MAIL_SIGNUP_ID,
@@ -126,9 +120,6 @@ module.exports = ({ db }) => {
               domain,
             },
           );
-
-          console.log(mailResult)
-
 
           if (mailResult instanceof Error) {
             throw mailResult;
