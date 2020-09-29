@@ -35,8 +35,8 @@ export const copy = {
     [SPANISH]: 'Título',
   },
   'formLabels.subtitle': {
-    [ENGLISH]: 'Share why you\'re Voting Tedra',
-    [SPANISH]: 'Comparte por qué estás #ConEd',
+    [ENGLISH]: 'Share why you\'re #TeamTedra',
+    [SPANISH]: 'Comparte por qué estás #TeamTedra',
   },
   'formLabels.background': {
     [ENGLISH]: 'Background',
