@@ -26,11 +26,12 @@ async function sendMail(
       dynamic_template_data: templateData,
     };
 
-    console.log(message)
-    console.log(to)
+    console.log(message);
+    console.log(to);
 
 
     if (MAIL_DEBUG) {
+      console.log("Using Debug Mode");
       message.mailSettings = {
         sandboxMode: {
           enable: true,
@@ -41,7 +42,7 @@ async function sendMail(
     }
 
     await mail.send(message);
-    console.log("Sent email")
+    console.log("Sent email");
   } catch (error) {
     error.message = JSON.stringify(error);
     return error;
