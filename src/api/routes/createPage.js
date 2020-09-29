@@ -3,6 +3,11 @@ const validateBackgroundField = require('../utils/validateBackgroundField');
 const validateAndNormalizeApiRequestFields = require('../utils/validateAndNormalizeApiRequestFields');
 const apiErrorHandler = require('../utils/apiErrorHandler');
 const transformPageResponse = require('../transformers/transformPageResponse');
+const sendMail = require('../services/sendMail');
+const {
+  MAIL_SIGNUP_ALERT_ID,
+  MAIL_SIGNUP_ALERT_RECIPIENTS,
+} = process.env;
 
 module.exports = ({ db }) => {
   async function createPage(req, res) {
@@ -75,6 +80,22 @@ module.exports = ({ db }) => {
 
       const pages = db.collection('pages');
       await pages.insertOne(page);
+
+      // Email admins to notify of successful creation
+      const mailResult = await sendMail(
+        process.env.MAIL_SIGNUP_ALERT_RECIPIENTS,
+        process.env.MAIL_SIGNUP_ALERT_ID,
+        {
+          first: token.user.firstName,
+          email: token.user.email,
+          title: page.title,
+          subtitle: page.subtitle,
+        },
+      );
+
+      if (mailResult instanceof Error) {
+        throw mailResult;
+      }
 
       res.json({ page });
     } catch (error) {
