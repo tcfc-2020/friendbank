@@ -90,6 +90,7 @@ module.exports = ({ db }) => {
           email: token.user.email,
           title: page.title,
           subtitle: page.subtitle,
+          code: validationResult.code,
         },
       );
 
